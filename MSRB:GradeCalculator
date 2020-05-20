@@ -1,7 +1,7 @@
 ; CIS-11
 ; Final Project
 ; Programmers: Brian Garcia, Ming Chen, Rigo Salzar, Scott Slessor
-; To be determined for the rest!
+; Grade Calculator
 
 .ORIG X3000
 
