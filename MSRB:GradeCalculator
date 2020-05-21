@@ -2,12 +2,67 @@
 ; Final Project
 ; Programmers: Brian Garcia, Ming Chen, Rigo Salzar, Scott Slessor
 ; Grade Calculator
-
+; Comment: Trying to understand the division portion (not functional)
 .ORIG X3000
+JSR DIV				; DIVISION SUBROUTINE
+STI R5, AVERAGE			; AVERAGE OF TEST SCORES (OUT OF 5)
+STI R3, R			; REMAINDER
+LDI R0, test_score_1		;LOADING test_score_1 TO R1
+LDI R1, test_score_2
+ADD R1, R1, R0			; R1 = ts1 + ts2
+
+LDI R2, test_score_3		;LOADING test_score_3 TO R2
+LDI R3, test_score_4
+ADD R3, R3, R2			; R3 = ts3 + ts4
+
+LDI R4, test_score_5		;LOADING test_score_5 TO R4
+ADD R3, R3, R4			; R3 = ts3 + ts4 + ts5
+ADD R1, R1, R3			; R1 = ts1 + ts2 + ts3 + ...
+STI R1, TOTAL			; STORE R1 TO TOTAL WHICH CONTAIN RESULTS
+
+; LAB 8 DIVISION, REMAINDER
+
+QUIT2	NOT R3, R3		; IN NEGATIVE AFTER THEY MULTIPLY
+	ADD R3, R3, #1
+
+	LD R5, SaveReg5		; RESTORE R5
+	LD R6, SaveReg6		; RESTORE R6
+	RET			; BACK TO CALLING PROGRAM
 
 
+DIV
+
+	ADD R2, R2, #0		; CHECKS IF Y IS 0
+	BRz QUIT3
+	ADD R6, R2, #0		; Y INTO R6
+	AND R5, R5, #0		; CLEAR R5
+	ADD R3, R1, #0		; X INTO R3
+	ADD R4, R2, #0		; Y INTO R4
+	NOT R4, R4		; INVERT
+	ADD R4, R4, #1		; 2S COMPLEMENT, R4 = -Y
+	ADD R0, R3, R4		; SUBTRACT X BY Y, R0 = X-Y
+	BRn QUIT2		; CHECKS IF Y>X
+LOOP3	ADD R5, R5, #1		; COUNTER
+	ADD R3, R3, R4		; SUBTRACT X BY Y
+	BRp LOOP3		; IF POS GO BACK TO LOOP3
+	BRz QUIT3		; IF 0 GO TO QUIT3
+	ADD R3, R3, R6		; IF NEG ADD THE RESULT + Y
+	ADD R5, R5, #-1		; IF NEG ADD THE COUNTER + 1
+	BR QUIT3
+QUIT3	RET			; BACK TO CALLING PROGRAM
 
 
-
+test_score_1		.FILL X3200
+test_score_2		.FILL X3201
+test_score_3		.FILL X3202
+test_score_4		.FILL X3203
+test_score_5		.FILL X3204
+TOTAL			.FILL X3205
+Y			.FILL X3206
+; TOTAL_Y			.FILL X3207
+AVERAGE			.FILL X3208
+R			.FILL X3209
+SaveReg5		.FILL X0
+SaveReg6		.FILL X0
 
 .END
