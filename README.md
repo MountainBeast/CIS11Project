@@ -14,7 +14,7 @@ Usefulness: This project is useful because it can aid you in guessing what your 
 
 Getting Started: To get started with the project, download the .asm file found 
 
-Here! https://github.com/MountainBeast/CIS11Project/blob/master/FPCIS11_2.asm
+Here! https://github.com/MountainBeast/CIS11Project/blob/master/FPCIS11_2-1.asm
  
 Load it into your LC3-Assembly simulator then load the program and launch, you'll be immediately propted for your test scores, simply enter them following on screen instructions and recieve your data, It's simple and easy!
 
