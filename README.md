@@ -3,7 +3,7 @@ Grade calculator project
 
 Creation date:05/05/2020
 
-Programmers: Brian Garcia, Ming Chen, Rigo Salzar, Scott Slessor
+Programmers: Ming Chen, Brian Garcia, Rigo Salzar, Scott Slessor
 
 Project Version: 2.1
 
