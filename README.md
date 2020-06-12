@@ -10,7 +10,7 @@ Project Version: 2.0
 
 Purpose: The purpose of this project is to be able to take 5 quizz or test scores, Tell you the average in both decimal and letter grade, The Best score, and the worst score, of the five. 
 
-Usefulness: This project is useful because it can aid you in guessing what your overall grade might be when taking into account your tests, the program also stands as a great proof of concept that could be used as a base to expand into a future larger project, like perhaps finding the averages of a hunred numbers instead! 
+Usefulness: This project is useful because it can aid you in guessing what your overall grade might be when taking into account your tests, the program also stands as a great proof of concept that could be used as a base to expand into a future larger project, like perhaps finding the averages of a hundred numbers instead! 
 
 Getting Started: To get started with the project, download the .asm file found 
 
