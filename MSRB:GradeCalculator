@@ -41,14 +41,14 @@ ADD R0, R0, #-16
 JSR MULTIPLY10		;which means score +10*input number
 
 
-;;;;;;;;;;;;;;;;;;;;;;GET 3rd INPUT AND VALIDATION
+;;;;;;;;;;;;;;;;;;;;;GET 3rd INPUT AND VALIDATION
 GETC			
 PUTC
 ADD R0, R0, #-16
 ADD R0, R0, #-16
 ADD R0, R0, #-16
 
-;;;;;;;;;;;;;;;;;;;;;;;GET THE SCORE.
+;;;;;;;;;;;;;;;;;;;;;GET THE SCORE.
 ADD R5, R5, R0		;R5 is the score, and add n*1 to it
 STI R5, SCORE
 
