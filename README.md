@@ -1,6 +1,12 @@
-# CIS11Project\n
+# CIS11Project
 Grade calculator project
+
+Creation date:05/05/2020
+
 Programmers: Brian Garcia, Ming Chen, Rigo Salzar, Scott Slessor
+
+Project Version: 1.9
+
 
 Purpose: The purpose of this project is to be able to take 5 quizz or test scores, Tell you the average in both decimal and letter grade, The Best score, and the worst score, of the five. 
 
