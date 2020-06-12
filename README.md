@@ -1,4 +1,4 @@
-# CIS11Project
+# CIS11Project\n
 Grade calculator project
 Programmers: Brian Garcia, Ming Chen, Rigo Salzar, Scott Slessor
 
